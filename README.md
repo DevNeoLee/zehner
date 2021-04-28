@@ -1,6 +1,6 @@
 # Site Test for Z
 
-## objective
+## Objective
 
 ### To implement a site design given and features as close as it appears on its design on Figma
 
@@ -13,11 +13,14 @@
 
 ---
 ## Thoughts on CSS
-- Tried to make as many utility classes reusable throughout the site
+- Tried to make as many utility classes, variables reusable throughout the site
 
 - Profer balance of flex and grid layout for different situations in most effective ways
 
-## Thoughts on Javascript
+- media query to different size of screen devices
+---
 
+## Thoughts on Javascript
+- 
 
 

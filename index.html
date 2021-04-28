@@ -29,13 +29,14 @@
                 </div>
                 <div class="right-nav">
                     <ul class="flex">
-                        <li>
-                            <a href=""><i class="fas fa-map-marker-alt fa-lg"></i></a><input type="text">
+                        <li id="country">
+                            <a href=""><i class="fas fa-map-marker-alt fa-lg"></i></a>
+                            <input type="text">
                         </li>
-                        <li><a href="">Support</a></li>
-                        <li><a href=""><i class="fas fa-search fa-lg" ></i></a></li>
-                        <li><a href=""><i class="fas fa-user-circle fa-lg"></i></a></li>
-                        <li><a href=""><i class="fas fa-shopping-cart fa-lg"></i></a></li>
+                        <li id="support"><a href="">Support</a></li>
+                        <li id="search"><a href=""><i class="fas fa-search fa-lg" ></i></a></li>
+                        <li id="account"><a href=""><i class="fas fa-user-circle fa-lg"></i></a></li>
+                        <li id="cart"><a href=""><i class="fas fa-shopping-cart fa-lg"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -46,10 +47,7 @@
     <!-- Body -->
     <!-- Showcase -->
     <section class="showcase">
-        <div class="container grid">
-            <div class="chair">
-                <img src="images/chair.svg" alt="chair-image">
-            </div>
+        <div class="showcase-container container flex flex-reverse">
             <div class="showcase-text flex" >
                 <div class="box-2">
                     <h1>Freeing up your hands.
@@ -57,6 +55,9 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
                     <button class="button">Shop Bassinets</button>
                 </div>
+            </div>
+            <div class="chair">
+                <img src="images/chair.svg" alt="chair-image">
             </div>
         </div>
     </section>
@@ -94,34 +95,35 @@
     <section class="categories">
         <div class="container grid gap-5">
             <div class="category flex">
-                <p>Shop Seats ></p>
+                <p>Shop Seats <span>></span></p>
                 <img src="images/toys.svg" alt="">
             </div>
             <div class="category flex">
-                <p>Shop Playards ></p>
+                <p>Shop Seats <span>></span></p>
                 <img src="images/toys.svg" alt="">
             </div>
             <div class="category flex">
-                <p>Shop Seats ></p>
+                <p>Shop Seats <span>></span></p>
                 <img src="images/toys.svg" alt="">
             </div>
             <div class="category flex">
-                <p>Shop Seats ></p>
+                <p>Shop Seats <span>></span></p>
                 <img src="images/toys.svg" alt="">
             </div>
             <div class="category flex">
-                <p>Shop Seats ></p>
+                <p>Shop Seats <span>></span></p>
                 <img src="images/toys.svg" alt="">
             </div>
             <div class="category flex">
-                <p>Shop Seats ></p>
+                <p>Shop Seats <span>></span></p>
                 <img src="images/toys.svg" alt="">
             </div>
         </div>
     </section>
 
     <!-- Banner1 -->
-    <section class="banner1 grid gap-5">
+    <section class="banner1">
+        <img id="baby" src="images/baby.svg" alt="">
         <div class="product-container flex">
             <div class="product box-3">
                 <img src="images/toys.svg" alt="chair-image">
@@ -130,7 +132,6 @@
                 <button class="button">Shop Now</button>
             </div>
         </div>
-        <img id="baby" src="images/baby.svg" alt="">
     </section>
 
     <!-- Banner2 -->
@@ -138,11 +139,13 @@
         <img src="images/yawn-baby.svg" alt="">
         <img src="images/handup-baby.svg" alt="">
         <div class="message box-4 flex">
-            <div class="box-1">
-                <h3>Playards</h3>
-                <p>Playards are hard to use.
-                The breeze® plus is easy.</p>
-                <button class="button">Shop Now</button>
+            <div class="box-4 flex inner-box">
+                <div class="box-1">
+                    <h3>Playards</h3>
+                    <p>Playards are hard to use.
+                    The breeze® plus is easy.</p>
+                    <button class="button">Shop Now</button>
+                </div>
             </div>
         </div>
     </section>
@@ -154,7 +157,8 @@
                 <img src="/images/stars.svg" alt="stars-rating">
                 <p>My baby loves his mamaRoo! Smooth motions and great controls, easy to use and assemble. I wish I would have had this
                 with my first baby.</p>
-                <span>Rachel N</span>
+                <div><span>Rachel N</span></div>
+                <div class="dots"><img src="/images/dots.svg" alt=""></div>
             </div>
         </div>
         <div class="left-arrow flex"><</div>
@@ -223,45 +227,7 @@
     <!-- Footer -->
     <section class="footer">
         <div class="container">
-            <div class="grid grid-6">
-                <div class="footer-category">
-                    <h4>Shop</h4>
-                    <ul>
-                        <li>RockRoo Infant Seat</li>
-                        <li>Breeze Plus Playard</li>
-                        <li>Breeze Go Playard</li>
-                        <li>High Chair</li>
-                    </ul>
-                </div>
-                <div class="footer-category">
-                    <h4>Shopping Help</h4>
-                    <ul>
-                        <li>Find a Store</li>
-                        <li>Account</li>
-                        <li>Shipping & Returns</li>
-                        <li>About Affirm Fianacing</li>
-                    </ul>
-                </div>
-                <div class="footer-category">
-                    <h4>Support</h4>
-                    <ul>
-                        <li>Support Center</li>
-                        <li>Product Registration</li>
-                        <li>Safety & Recall</li>
-                    </ul>
-                </div>
-                <div class="footer-category">
-                    <h4>Company</h4>
-                    <ul>
-                        <li>Careers</li>
-                        <li>Contact Us</li>
-                        <li>About Us</li>
-                        <li>4moms Cares</li>
-                        <li>Media Kit</li>
-                        <li>Patents</li>
-                
-                    </ul>
-                </div>
+            <div class="category-container flex flex-reverse flex-space-between">
                 <div class="footer-contact flex">
                     <img src="images/4moms-logo.png" alt="4moms-logo">
                     <p>Get the latest 4moms news and offers</p>
@@ -278,11 +244,50 @@
                         <i class="fab fa-youtube fa-lg"></i>
                     </div>
                 </div>
+                <div class="footer-categories grid grid-7">
+                    <div class="footer-category">
+                        <h4>Shop</h4>
+                        <ul>
+                            <li>RockRoo Infant Seat</li>
+                            <li>Breeze Plus Playard</li>
+                            <li>Breeze Go Playard</li>
+                            <li>High Chair</li>
+                        </ul>
+                    </div>
+                    <div class="footer-category">
+                        <h4>Shopping Help</h4>
+                        <ul>
+                            <li>Find a Store</li>
+                            <li>Account</li>
+                            <li>Shipping & Returns</li>
+                            <li>About Affirm Fianacing</li>
+                        </ul>
+                    </div>
+                    <div class="footer-category">
+                        <h4>Support</h4>
+                        <ul>
+                            <li>Support Center</li>
+                            <li>Product Registration</li>
+                            <li>Safety & Recall</li>
+                        </ul>
+                    </div>
+                    <div class="footer-category">
+                        <h4>Company</h4>
+                        <ul>
+                            <li>Careers</li>
+                            <li>Contact Us</li>
+                            <li>About Us</li>
+                            <li>4moms Cares</li>
+                            <li>Media Kit</li>
+                            <li>Patents</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="credit flex">
                 <p>© 2019 4moms. All Rights Reserved.</p>
-                <p>Terms & Conditions</p>
-                <p>Privacy Policy</p>
+                <div class="flex flex-space-between"><p>Terms & Conditions</p><p>Privacy Policy</p></div>
+                
             </div>
         </div>
     </section>
