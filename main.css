@@ -1,23 +1,36 @@
-* {
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+:root {
+    --main-color: #000;
+    --main-bg-color: #fff;
+    --bg-color-1: #eee;
+    --shadow-color: #e9e9e9;
+    --main-pastel: rgb(167, 227, 247);
+}
+
+html {
+    font-size: 18px;
+    height: 100%;
+}
+
 body {
     font-family: 'Didact Gothic', sans-serif;    
     font-size: 18px;
-    color: #000;
+    color: var(--main-color);
     line-height: 1.7;
+    /* height: 100%; */
 }
 
 a {
     text-decoration: none;
-    color: #000;
 }
 
 a:visited {
-    color: #000;
+    color: var(--main-color);
 }
 
 h1, h2, h3, h4 {
@@ -119,13 +132,13 @@ li {
     width: 450px;
     border-radius: 10px;
     /* position: absolute; */
-    background-color: #fff;
+    background-color: var(--main-bg-color);
 }
 
 .box-5 {
     width: 75%;
     height: 354px;
-    background-color: #eee;
+    background-color: var(--bg-color-1);
     padding: 10px;
 }
 
@@ -138,8 +151,8 @@ li {
 .button {
     border-radius: 10px;
     padding: 15px 40px;
-    color: white;
-    background-color: #000;
+    color: var(--main-bg-color);
+    background-color: var(--main-color);
     margin: 20px 0;
     border: none;
     min-width: 200px;
@@ -148,12 +161,15 @@ li {
 
 /* Header */
 .header {
-    background-color: #fff;
+    background-color: var(--main-bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 #header-message {
-    background-color: #000;
-    color: white;
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
     text-align: center;
     font-size: 0.9rem;
     height: 40px;
@@ -166,12 +182,12 @@ li {
 /* Navbar */
 .navbar {
     height: 100px;
-    border-bottom: 1px solid #e9e9e9;
+    border-bottom: 1px solid var(--shadow-color);
     position: relative;
     font-weight: 800;
-    box-shadow: 0.2px 0.2px #e9e9e9;
+    box-shadow: 0.2px 0.2px var(--shadow-color);
     width: 100%;
-    color: #000;
+    color: var(--main-color);
 }
 
 .navbar .flex {
@@ -203,16 +219,50 @@ li {
     transform: scale(1.1);
 }
 
+.fa-stack {
+    padding: 0 0rem 1rem 3rem;
+    display: none;
+    transition: all 0.35s ease-in-out;
+    cursor: pointer;
+}
+
+.fa-stack:hover {
+    transform: scale(1.1);
+}
+
 /* Logo */
 #logo {
     width: 150px;
+    min-width: 120px;
     margin: 15px 0 0 0;
 }
+
+/* Main */
+/* Side Menu */
+.side-menu-container {
+    position: absolute;
+    z-index: 999;
+    height: 6310px;
+    display: none;
+}
+
+.side-menu {
+    background-color: var(--main-bg-color);
+    position: sticky;
+    top: 140px;
+    width: 250px;
+    padding-bottom: 100px;
+}
+
+.side-menu li {
+    padding: 1.2rem 0 0 1.5rem;
+}
+
 
 /* Showcase */
 .showcase {
     min-height: 620px;
-    background-color: #eee;
+    background-color: var(--bg-color-1);
 }
 
 .showcase-text {
@@ -256,7 +306,7 @@ li {
 }
 
 .summary i {
-    color: rgb(205, 239, 250);
+    color: var(--main-pastel);
 }
 
 /* Categories */
@@ -267,7 +317,7 @@ li {
 .category {
     width: 100%;
     height: 530px;
-    background-color: #eee;
+    background-color: var(--bg-color-1);
     position: relative;
 }
 
@@ -291,7 +341,7 @@ li {
 }
 
 .product-container {
-    background-color: #eee;
+    background-color: var(--bg-color-1);
     width: 100%;
     height: 710px;
     margin: 0 auto;
@@ -330,7 +380,7 @@ li {
 
 .inner-box {
     padding: 10px;
-    border: 1px solid rgba(198, 198, 198, 0.204);
+    border: 1px solid var(--shadow-color);
     height: 250px;
     width: 400px;
     border-radius: 10px;
@@ -339,7 +389,7 @@ li {
 /* Review */
 .review {
     height: 520px;
-    background-color: #fff;
+    background-color: var(--main-bg-color);
     font-size: 1.5rem;
     position: relative;
 }
@@ -360,9 +410,9 @@ li {
 }
 
 .left-arrow, .right-arrow {
-    background-color: #000;
+    background-color: var(--main-color);
     border-radius: 50%;
-    color: #fff;
+    color: var(--main-bg-color);
     width: 40px;
     height: 40px;
     position: absolute;
@@ -398,8 +448,8 @@ li {
 .community .plus {
     width: 40px;
     height: 40px;
-    background-color: black;
-    color: white;
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
     border-radius: 50%;
     font-size: 1.7rem;
     position: absolute;
@@ -412,7 +462,7 @@ li {
     margin-top: 104px;
     text-align: center;
     height: 518px;
-    background-color: #eee;
+    background-color: var(--bg-color-1);
 }
 
 .stat h1 {
@@ -445,7 +495,7 @@ li {
 
 .icon i {
     padding: 15px;
-    color:rgba(53, 190, 249, 0.304);
+    color: var(--main-pastel);
 }
 
 /* Award */
@@ -461,8 +511,8 @@ li {
 /* Footer */
 .footer {
     min-height: 423px;
-    background: #000;
-    color: #fff;
+    background: var(--main-color);
+    color: var(--main-bg-color);
 }
 
 .footer-contact {
@@ -500,7 +550,7 @@ li {
 }
 
 .footer .input {
-    background-color: #eee;
+    background-color:  var(--bg-color-1);
     width: 100%;
     height: 50px;
     justify-content: left;
@@ -510,28 +560,28 @@ li {
     width: 100%;
     height: 100%;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--main-bg-color);
     
-    background-color: #000;
+    background-color: var(--main-color);
 }
 
 .footer [type=submit] {
     font-size: 1.1rem;
     height: 100%;
-    color: #fff;
-    background-color: #000;
+    color: var(--main-bg-color);
+    background-color: var(--main-color);
     border: none;
     padding: 10px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--main-bg-color);
 }
 
 .footer .arrow-submit {
-    background-color: #000;
+    background-color: var(--main-color);
     /* height: 100%; */
     padding: 10px;
     font-size: 1.7rem;
     vertical-align: center;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--main-bg-color);
 }
 
 .social i {
@@ -548,6 +598,7 @@ li {
 }
 
 @media (max-width: 1235px) {
+
     .banner2 {
         grid-template-columns: repeat(1, 1fr);
         min-height: 750px;
@@ -576,6 +627,14 @@ li {
 
 @media (max-width: 1005px) {
 
+   .fa-stack {
+        display: initial;
+    }
+
+    .fa-times {
+        display: none;
+    }
+    
     .showcase-container {
         display: initial;
         height: 450px;
@@ -601,9 +660,12 @@ li {
     }
 
     .left-nav {
+        /* display: none; */
         visibility: hidden;
+        width: 0;
     }
 
+    
     #support, #country {
         display: none;
     }
@@ -611,6 +673,7 @@ li {
     #account {
         position: absolute;
         left: 20%;
+        /* padding-right: 1rem; */
     }
 
     .banner1 {
@@ -628,7 +691,7 @@ li {
     }
 
     .product-container {
-        background-color: #fff;
+        background-color: var(--main-bg-color);
     }
 }
 
@@ -680,10 +743,15 @@ li {
 }
 
 @media (max-width: 625px) {
+    #account {
+        position: absolute;
+        left: 15%;
+    }
 
     .review {
         padding-top: 0px;
     }
+
     .left-arrow, .right-arrow {
         display: none;
     }
