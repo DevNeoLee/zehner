@@ -25,4 +25,10 @@
 
 - use of CSS utility classes to add and remove to classList when the buttons clicked
 
+## Thoughts on Future Implementations
+- vanilla javascript to design single-page-application as much to get close the features showed on your design markup
 
+- the native JS capabilities to write code to implement
+1. modular JS
+2. navigation with a router
+3. hosting and loading pages

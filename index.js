@@ -1,4 +1,4 @@
-
+// selectors
 const side_menu = document.querySelector('.fa-stack');
 const side_menu_content = document.querySelector('.side-menu-container')
 const side_menu_close = document.querySelector('.fas.fa-times');
