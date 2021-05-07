@@ -21,6 +21,8 @@
 ---
 
 ## Thoughts on Javascript
-- 
+- add EventListners for buttons and links
+
+- use of CSS utility classes to add and remove to classList when the buttons clicked
 
 
