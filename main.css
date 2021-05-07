@@ -76,6 +76,27 @@ li {
     justify-content: space-around;
 }
 
+.hide_display {
+    display: none;
+}
+
+.original {
+    color: blue;
+    background-color: coral;
+    display: block;
+}
+
+.demo {
+    /* color: red;
+    padding: 20px;
+    margin: 20px;
+    background-color: chartreuse; */
+    opacity: 0;
+    display: none;
+    /* height: 0;
+    overflow: hiden; */
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -241,9 +262,8 @@ li {
 /* Side Menu */
 .side-menu-container {
     position: absolute;
-    z-index: 999;
-    height: 6310px;
-    display: none;
+    z-index: 977;
+    height: 9083px;
 }
 
 .side-menu {
@@ -632,7 +652,7 @@ li {
     }
 
     .fa-times {
-        display: none;
+        /* display: none; */
     }
     
     .showcase-container {

@@ -1,34 +1,19 @@
 
-// for ( node of document.body.childNodes ) {
-//     console.log( node )
-// }
+const side_menu = document.querySelector('.fa-stack');
+const side_menu_content = document.querySelector('.side-menu-container')
+const fa_times = document.querySelector('.fas.fa-times');
 
-//    for (let i = 0; i < document.body.childNodes.length; i++) {
-//       console.log( document.body.childNodes[i] ); // Text, DIV, Text, UL, ..., SCRIPT
-//     }
+side_menu_toggle();
 
-
-const elem = document.querySelector('.banner1')
-// console.log(elem.childNodes[0])
-// console.log(elem.childNodes)
-
-// for (node of elem.childNodes ) {
-//     console.log(node)
-// }
-
-// console.log(elem.lastChild);
-// console.log(elem.childNodes)
-// console.log(Array.from(elem.childNodes))
-// console.log(Array.isArray(Array.from(elem.childNodes)))
-// console.log(document.body)
-// console.log(document.body.childNodes)
-// console.log(elem.childNodes[0].nextSibling)
-
-  // shows 0, 1, length, item, values and more.
-  for (let prop of document.body.children) console.log(prop);
-
-  const side_menu = document.querySelector('.fa-stack');
-  const side_menu_content = document.querySelector('.side-menu-container')
+function side_menu_toggle() {
   side_menu.addEventListener('click', () => {
-    alert(side_menu_content.getAttribute("style"));
+    if (side_menu_content.classList.contains('hide_display')) {
+      side_menu_content.classList.remove('hide_display');
+      fa_times.classList.remove('hide_display');
+    }
+    else {
+      side_menu_content.classList.add('hide_display');
+      fa_times.classList.add('hide_display');
+    }
   })
+}
