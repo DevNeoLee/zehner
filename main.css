@@ -7,11 +7,14 @@
 }
 
 :root {
-    --main-color: #000;
-    --main-bg-color: #fff;
-    --bg-color-1: #eee;
+    --main-color: #000000;
+    --main-bg-color: #FFFFFF;
+    --bg-color-1: #FAFAFA;
+    --bg-color-2: #F2F2F2;
+    --bg-color-3: #E9E9E9;
+    --bg-color-4: #EEEEEE;
     --shadow-color: #e9e9e9;
-    --main-pastel: rgb(167, 227, 247);
+    --main-pastel: #17A7E0;
 }
 
 html {
@@ -52,6 +55,7 @@ img {
 li {
     list-style-type: none;
 }
+
 
 /* utility */
 .container {
@@ -137,19 +141,18 @@ li {
     height: 300px;
     width: 450px;
     border-radius: 10px;
-    /* position: absolute; */
     background-color: var(--main-bg-color);
 }
 
 .box-5 {
     width: 75%;
     height: 354px;
-    background-color: var(--bg-color-1);
+    background-color: var(--bg-color-4);
     padding: 10px;
 }
 
 .box-6 {
-    width: 560px;
+    width: 70%;
     height: 200px;
     text-align: center;
     margin-bottom: 80px;
@@ -161,30 +164,34 @@ li {
     color: var(--main-bg-color);
     background-color: var(--main-color);
     margin: 20px 0;
-    border: none;
     min-width: 200px;
     font-size: 1.1rem;
+    outline: none;
+    border:var(--main-color);
+    transition: all 0.25s ease;
+}
+
+.button:hover {
+    background-color: var(--main-pastel);
+    color: var(--main-color);
 }
 
 /* Header */
 .header {
     background-color: var(--main-bg-color);
     position: fixed;
-    top: 0;
+    top: 0px;
+    left: 0px;
     width: 100%;
     z-index: 1000;
 }
 
 #header-message {
-    background-color: var(--main-color);
+    background-color: var(--main-color); 
     color: var(--main-bg-color);
-    text-align: center;
     font-size: 0.9rem;
     height: 40px;
-    display: inline-block;
-    transition: transform 0.5s ease;
     width: 100%;
-    padding: 0 auto;
 }
 
 /* Navbar */
@@ -196,53 +203,57 @@ li {
     box-shadow: 0.2px 0.2px var(--shadow-color);
     width: 100%;
     color: var(--main-color);
+    /* background-color: lightyellow; */
 }
 
-.navbar .flex {
-    justify-content: space-around;
+.navbar .container {
+    width: 100%;
 }
-
 .navbar ul {
-    display: flex;
+    /* background-color: lightskyblue; */
+    width: 100%;
 }
 
 .left-nav ul {
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
-.header a {
-    padding: 20px;
-    margin: 0 5px;
+.right-nav ul {
+    justify-content: flex-end;
 }
 
-.header a:hover {
-    transform: scale(1.1);
-} 
+.left-nav, .right-nav {
+    width: calc(50% - 65px);
+}
 
 .navbar li {
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 0 2rem;
+}
+
+.right-nav li {
+    padding: 0 1.2rem;
 }
 
 .navbar li:hover {
-    transform: scale(1.1);
+    opacity: 0.4;
 }
 
 .fa-stack {
-    padding: 0 0rem 1rem 3rem;
     display: none;
     transition: all 0.35s ease-in-out;
     cursor: pointer;
 }
 
-.fa-stack:hover {
-    transform: scale(1.1);
+#account2 {
+    display: none;
 }
 
 /* Logo */
 #logo {
-    width: 150px;
-    min-width: 120px;
-    margin: 15px 0 0 0;
+    min-width: 100px;
+    width: 130px;
 }
 
 /* Searchbar */
@@ -279,6 +290,11 @@ li {
 
 #close-icon {
     padding: 1rem;
+    cursor: pointer;
+}
+
+#close-icon:hover {
+    opacity: 0.4;
 }
 
 /* Main */
@@ -306,7 +322,7 @@ li {
 .showcase {
     margin-top: 140px;
     min-height: 620px;
-    background-color: var(--bg-color-1);
+    background-color: var(--bg-color-4);
 }
 
 .showcase-text {
@@ -361,7 +377,7 @@ li {
 .category {
     width: 100%;
     height: 530px;
-    background-color: var(--bg-color-1);
+    background-color: var(--bg-color-4);
     position: relative;
 }
 
@@ -379,12 +395,17 @@ li {
 /* Banner1 */
 .banner1 {
     margin-top: 74px;
+    width: 100%;
+}
+
+.banner1-container {
+    height: 710px;
     display: flex;
     flex-direction: row-reverse;
 }
 
 .product-container {
-    background-color: var(--bg-color-1);
+    background-color: var(--bg-color-4);
     width: 100%;
     height: 710px;
     margin: 0 auto;
@@ -395,11 +416,7 @@ li {
 }
 
 .banner1 img {
-    width: 250px;
-}
-
-#baby {
-    width: 716px;
+    width: 70%;
 }
 
 /* Banner2 */
@@ -475,16 +492,16 @@ li {
 
 /* Community */
 .community {
-    margin-top: 50px;
+    margin: 50px 0;
     position: relative;
 }
 
 .community::before {
     content: "The 4moms community";
-    position: absolute;
+    position: relative;
     font-size: 1.5rem;
-    left: 45%;
-    top: -10%;
+    left: calc(50% - 120px);
+    top: -40px;
     text-align: center;
 }
 
@@ -494,10 +511,10 @@ li {
     background-color: var(--main-color);
     color: var(--main-bg-color);
     border-radius: 50%;
-    font-size: 1.7rem;
-    position: absolute;
-    left: 48%;
-    bottom: -10%;
+    font-size: 2rem;
+    position: relative;
+    left: 50%;
+    bottom: -40px;
 }
 
 /* Stat */
@@ -505,7 +522,7 @@ li {
     margin-top: 104px;
     text-align: center;
     height: 518px;
-    background-color: var(--bg-color-1);
+    background-color: var(--bg-color-4);
 }
 
 .stat h1 {
@@ -515,12 +532,14 @@ li {
 .column {
     flex-direction: column;
     text-align: center;
-    width: 1400px;
-
+    width: 100%;
 }
 .description {
     padding: 0 100px;
-    width: 640px;
+    width: 60%;
+    padding: 0 auto;
+    margin: 0 auto;
+    min-height: 100px;
 }
 
 .stat .button {
@@ -553,7 +572,6 @@ li {
 
 /* Footer */
 .footer {
-    min-height: 423px;
     background: var(--main-color);
     color: var(--main-bg-color);
 }
@@ -629,7 +647,6 @@ li {
 }
 
 .credit {
-    padding: 20px;
     justify-content: left;
 }
 
@@ -639,7 +656,7 @@ li {
 
 @media (max-width: 1235px) {
     .banner2 {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
         min-height: 750px;
     }
 
@@ -663,66 +680,71 @@ li {
     }
 }
 
-@media (max-width: 1005px) {
-   .fa-stack {
-        display: initial;
+@media (max-width: 1075px) {
+   .fa-stack, #account2 {
+        display: block;
+    }
+
+    #shop, #about_4moms, #account, #support, #country {
+        display: none;
+    }
+
+    .navbar li {
+        padding: 0 3rem;
+        margin: 0;
+        /* background-color:rgb(0, 0, 255); */
+    }
+
+    .left-nav ul {
+        justify-content: flex-start;
+        /* background-color: lightcoral; */
+    }
+
+    .right-nav ul {
+        justify-content: flex-end;
+        /* background-color: lightcoral; */
+    }
+
+    /* Showcase */
+    .showcase {
+        /* height: 650px; */
+        z-index: 10;
     }
 
     .showcase-container {
         display: initial;
-        height: 450px;
+        height: 650px;
+        /* overflow: auto; */
     }
 
     .showcase-text {
         min-height: 380px;
         text-align: center;
+        margin: 0;
+        padding: 0;
     }
 
     .chair {
-        height: 500px;
-        position: initial;
-        width: 400px;
-        padding: 0 auto;
+        height: 450px;
+        /* position: absolute; */
+        /* top: 500px; */
+        
+        width: 450px;
+        padding: 0;
         margin: 0 auto;
     }
 
     .chair img {
-        padding: 0 auto;
-        margin: 0 auto;
+        /* padding: 0 auto;
+        margin: 0 auto; */
         position: initial;
-    }
-
-    .left-nav {
-        /* display: none; */
-        visibility: hidden;
-        width: 0;
-    }
-
-    #support, #country {
-        display: none;
-    }
-
-    #account {
-        position: absolute;
-        left: 20%;
-        /* padding-right: 1rem; */
-    }
-
-    .banner1 {
-        display: grid;
-        grid-template-columns: 1fr;
         width: 100%;
+        margin: 0;
     }
 
-    .banner1 img {
-        justify-self: center;
-    }
-
-    #baby {
-        width: 500px;
-    }
-
-    .product-container {
+    .summary {
+        z-index: 20;
+        position: relative;
         background-color: var(--main-bg-color);
     }
 }
@@ -734,6 +756,7 @@ li {
 
     .category {
         margin-bottom: 5px;
+        height: 350px;
     }
 
     .category p {
@@ -750,6 +773,38 @@ li {
         width: 180px;
     }
 
+    .banner1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .banner1-container {
+        height: 100%;
+        display: initial;
+    }
+
+    .banner1 img {
+        justify-self: center;
+    }
+
+    #baby {
+        width: 100%;
+    }
+
+    .product-container {
+        background-color: var(--main-bg-color);
+    }
+
+    .review .box-5 {
+        height: 400px;
+    }
+
+    .review .box-6 {
+        height: 200px;
+        width: 85%;
+    }
+    
     .stat {
         height: 400px;
     }
@@ -758,12 +813,15 @@ li {
         display: none;
     }
 
+    .description {
+        width: 80%;
+    }
     .category-container {
         display: initial;
     }
 
     .footer-contact {
-        width: 330px;
+        width: 300px;
         margin: 0 auto;
     }
 
@@ -773,21 +831,30 @@ li {
 }
 
 @media (max-width: 625px) {
-    #account {
-        position: absolute;
-        left: 15%;
+    .navbar li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar ul {
+        justify-content: space-around;
+    }
+    
+    .summary {
+        height: 100%;
+    }
+
+    .summary .container {
+        grid-template-columns: 1fr;
     }
 
     .review {
         padding-top: 0px;
+        font-size: 1.2rem;
     }
 
     .left-arrow, .right-arrow {
         display: none;
-    }
-
-    .box-5 {
-        height: 400px;
     }
 
     .dots {
@@ -801,4 +868,63 @@ li {
     .footer-categories {
         grid: initial;
     }
+
+    footer .credit {
+      display: inline-block;
+    }
 }
+
+@media (max-width: 530px) {
+    .description {
+        width: 100%;
+    }
+
+    .categories, .categories .container {
+        width: 100%;
+    }
+
+    .category {
+        height: 200px;
+        width: 100%;
+    }
+    .category p {
+        font-size: 1.2rem;
+    }
+
+    .category p span {
+        font-size: 2rem;
+        padding: 0 2rem;
+    }
+
+    .category img {
+        width: 80px;
+    }
+
+    .chair {
+        width: 310px;
+        height: 210px;
+    }
+}
+
+@media (max-width: 440px) {
+    #logo {
+        width: 100px;
+    }
+
+    .review .box-5 {
+        height: 410px;
+    }
+
+    .review .box-6 {
+        height: 350px;
+        height: 80%;
+        width: 95%;
+    }
+
+    .description {
+        width: 90%;
+        padding: 0 15px;
+    }
+}
+
+

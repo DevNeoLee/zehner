@@ -14,34 +14,35 @@
 <body>
     <!-- Header -->
     <div class="header">
-        <div id="header-message"><p>Free Shipping On Orders Over $49</p></div>
+        <div id="header-message" class="flex"><span>Free Shipping On Orders Over $49</span></div>
         <!-- Navbar -->
         <div class="navbar">
-            <div class="container flex">
-                <span class="fa-stack">              
-                    <i class="fas fa-bars fa-stack-2x"></i>
-                    <i class="fas fa-times fa-stack-2x hide_display"></i>
-                </span>
+            <div class="container flex flex-space-between"> 
                 <div class="left-nav">
                     <ul class="flex">
-                        <li><a href="">Shop</a></li>
-                        <li><a href="">About 4moms</a></li>
+                        <li class="fa-stack">
+                            <i class="fas fa-bars fa-stack-2x"></i>
+                            <i class="fas fa-times fa-stack-2x hide_display"></i>
+                        </li>
+                        <li id="account2"><a><i class="fas fa-user-circle"></i></a></li>
+                        <li id="shop">Shop</li>
+                        <li id="about_4moms">About 4moms</li>
                     </ul>
                 </div>
                 <!-- Logo -->
-                <div id="logo">
+                <div id="logo" class="flex">
                     <img src="images/4moms-logo.png" alt="4moms-logo">                
                 </div>
                 <div class="right-nav">
                     <ul class="flex">
                         <li id="country">
-                            <i class="fas fa-map-marker-alt fa-lg"></i>
+                            <i class="fas fa-map-marker-alt"></i>
                             <input type="text">
                         </li>
                         <li id="support"><a>Support</a></li>
-                        <li id="search"><a><i class="fas fa-search fa-lg" ></i></a></li>
-                        <li id="account"><a><i class="fas fa-user-circle fa-lg"></i></a></li>
-                        <li id="cart"><a><i class="fas fa-shopping-cart fa-lg"></i></a></li>
+                        <li id="search"><a><i class="fas fa-search" ></i></a></li>
+                        <li id="account"><a><i class="fas fa-user-circle"></i></a></li>
+                        <li id="cart"><a><i class="fas fa-shopping-cart"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -153,13 +154,15 @@
         
         <!-- Banner1 -->
         <section class="banner1">
-            <img id="baby" src="images/baby-comfy.png" alt="">
-            <div class="product-container flex">
-                <div class="product box-3">
-                    <img src="images/seat.png" alt="chair-image">
-                    <h3>rockaRoo®</h3>
-                    <p>Back and forth gliding motion babies love, in a compact size.</p>
-                    <button class="button">Shop Now</button>
+            <div class="banner1-container">
+                <img id="baby" src="images/baby-comfy.png" alt="">
+                <div class="product-container flex">
+                    <div class="product box-3">
+                        <img src="images/seat.png" alt="chair-image">
+                        <h3>rockaRoo®</h3>
+                        <p>Back and forth gliding motion babies love, in a compact size.</p>
+                        <button class="button">Shop Now</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -213,7 +216,7 @@
                     </div>
                 </div>
             </div>
-            <div class="plus flex">+</div>
+            <div class="plus flex"><p class="flex pp">+</p></div>
         </section>
         
         <!-- Stat -->
@@ -259,7 +262,7 @@
     </div>
   
     <!-- Footer -->
-    <section class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="category-container flex flex-reverse flex-space-between">
                 <div class="footer-contact flex">
@@ -323,7 +326,7 @@
                 <div class="flex flex-space-between"><p>Terms & Conditions</p><p>Privacy Policy</p></div>   
             </div>
         </div>
-    </section>
+    </footer>
     <script src="index.js"></script>
 </body>
 </html>
