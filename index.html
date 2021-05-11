@@ -21,23 +21,37 @@
                 <div class="left-nav">
                     <ul class="flex">
                         <li class="fa-stack">
-                            <i class="fas fa-bars fa-stack-2x"></i>
-                            <i class="fas fa-times fa-stack-2x hide_display"></i>
+                            <a><i class="fas fa-bars fa-stack-2x"></i>
+                            <i class="fas fa-times fa-stack-2x hide_display"></i></a>
                         </li>
                         <li id="account2"><a><i class="fas fa-user-circle"></i></a></li>
-                        <li id="shop">Shop</li>
-                        <li id="about_4moms">About 4moms</li>
+                        <li id="shop"><a>Shop</a></li>
+                        <li id="about_4moms"><a href="">About 4moms</a></li>
                     </ul>
                 </div>
                 <!-- Logo -->
                 <div id="logo" class="flex">
-                    <img src="images/4moms-logo.png" alt="4moms-logo">                
+                    <a><img src="images/4moms-logo.png" alt="4moms-logo"></a>               
                 </div>
                 <div class="right-nav">
                     <ul class="flex">
                         <li id="country">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <input type="text">
+                            <div id="country-label-container" class="flex" aria-haspopup="true">
+                                <a><i class="fas fa-map-marker-alt"></i>
+                                <span id="country-label">United States</span></a>
+                            </div>
+                            <div id="country-options" class="hide_display">
+                                <ul role="listbox">
+                                    <li role="option">United States</li>
+                                    <li role="option">Canada</li>
+                                    <li role="option">United Kingdom</li>
+                                    <li role="option">Italy</li>
+                                    <li role="option">Japan</li>
+                                    <li role="option">France</li>
+                                    <li role="option">Singapore</li>
+                                    <li role="option">Spain</li>
+                                </ul>
+                            </div>
                         </li>
                         <li id="support"><a>Support</a></li>
                         <li id="search"><a><i class="fas fa-search" ></i></a></li>
@@ -327,6 +341,6 @@
             </div>
         </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="index.js" ></script>
 </body>
 </html>
