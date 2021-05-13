@@ -20,43 +20,43 @@
             <div class="container flex flex-space-between"> 
                 <div class="left-nav">
                     <ul class="flex">
-                        <li class="fa-stack">
-                            <a><i class="fas fa-bars fa-stack-2x"></i>
-                            <i class="fas fa-times fa-stack-2x hide_display"></i></a>
+                        <li id="main-menu">
+                            <a href=""><span class="fa-stack"><i class="fas fa-bars fa-stack-2x"></i>
+                            <i class="fas fa-times fa-stack-2x hide_display"></i></span></a>
                         </li>
-                        <li id="account2"><a><i class="fas fa-user-circle"></i></a></li>
-                        <li id="shop"><a>Shop</a></li>
+                        <li id="account2"><a href=""><i class="fas fa-user-circle"></i></a></li>
+                        <li id="shop"><a href="">Shop</a></li>
                         <li id="about_4moms"><a href="">About 4moms</a></li>
                     </ul>
                 </div>
                 <!-- Logo -->
                 <div id="logo" class="flex">
-                    <a><img src="images/4moms-logo.png" alt="4moms-logo"></a>               
+                    <a href=""><img src="images/4moms-logo.png" alt="4moms-logo"></a>               
                 </div>
                 <div class="right-nav">
                     <ul class="flex">
                         <li id="country">
-                            <div id="country-label-container" class="flex" aria-haspopup="true">
-                                <a><i class="fas fa-map-marker-alt"></i>
+                            <div id="country-label-container" class="flex">
+                                <a href=""><i class="fas fa-map-marker-alt"></i>
                                 <span id="country-label">United States</span></a>
                             </div>
-                            <div id="country-options" class="hide_display">
+                            <div id="country-options" class="hide_display" aria-haspopup="true">
                                 <ul role="listbox">
-                                    <li role="option">United States</li>
-                                    <li role="option">Canada</li>
-                                    <li role="option">United Kingdom</li>
-                                    <li role="option">Italy</li>
-                                    <li role="option">Japan</li>
-                                    <li role="option">France</li>
-                                    <li role="option">Singapore</li>
-                                    <li role="option">Spain</li>
+                                    <li role="option" tabindex="0">United States</li>
+                                    <li role="option" tabindex="0">Canada</li>
+                                    <li role="option" tabindex="0">United Kingdom</li>
+                                    <li role="option" tabindex="0">Italy</li>
+                                    <li role="option" tabindex="0">Japan</li>
+                                    <li role="option" tabindex="0">France</li>
+                                    <li role="option" tabindex="0">Singapore</li>
+                                    <li role="option" tabindex="0">Spain</li>
                                 </ul>
                             </div>
                         </li>
-                        <li id="support"><a>Support</a></li>
-                        <li id="search"><a><i class="fas fa-search" ></i></a></li>
-                        <li id="account"><a><i class="fas fa-user-circle"></i></a></li>
-                        <li id="cart"><a><i class="fas fa-shopping-cart"></i></a></li>
+                        <li id="support"><a href="">Support</a></li>
+                        <li id="search"><a href=""><i class="fas fa-search" ></i></a></li>
+                        <li id="account"><a href=""><i class="fas fa-user-circle"></i></a></li>
+                        <li id="cart"><a href=""><i class="fas fa-shopping-cart"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -66,24 +66,24 @@
                     <i class="fas fa-search fa-1x" id="search-icon"></i>
                     <input type="text" placeholder="Search...">
                 </div>
-                <i class="fas fa-times fa-2x" id="close-icon"></i>
+                <a href=""><i class="fas fa-times fa-2x" id="close-icon"></i></a>
             </div>
         </div>
         <!-- Side Menu -->
-        <div class="side-menu-container hide_display">
-            <ul class="side-menu">
-                <li>Shop All</li>
-                <li>Seats</li>
-                <li>Playards</li>
-                <li>Feeding</li>
-                <li>Bassinets</li>
-                <li>Both</li>
-                <li>Mobile</li>
-                <li>Accessories</li>
-                <li>Spare Parts</li>
-                <li> </li>
-                <li>About 4moms</li>
-                <li>Support</li>
+        <div id="side-menu-container" class="hide_display" aria-haspopup="true">
+            <ul id="side-menu" role="listbox">
+                <li role="option" tabindex="0">Shop All</li>
+                <li role="option" tabindex="0">Seats</li>
+                <li role="option" tabindex="0">Playards</li>
+                <li role="option" tabindex="0">Feeding</li>
+                <li role="option" tabindex="0">Bassinets</li>
+                <li role="option" tabindex="0">Both</li>
+                <li role="option" tabindex="0">Mobile</li>
+                <li role="option" tabindex="0">Accessories</li>
+                <li role="option" tabindex="0">Spare Parts</li>
+                <br>
+                <li role="option" tabindex="0">About 4moms</li>
+                <li role="option" tabindex="0">Support</li>
             </ul>
         </div>
     </div>
@@ -137,31 +137,31 @@
         </section>
         
         <!-- Categories -->
-        <section class="categories">
+        <section class="categories" id="categories">
             <div class="container grid gap-5">
                 <div class="category flex">
                     <p>Shop Seats <span>></span></p>
-                    <img src="images/seat.png" alt="">
+                    <a href="#categories"><img src="images/seat.png" alt=""></a>
                 </div>
                 <div class="category flex">
                     <p>Shop Seats <span>></span></p>
-                    <img src="images/seat.png" alt="">
+                    <a href="#categories"><img src="images/seat.png" alt=""></a>
                 </div>
                 <div class="category flex">
                     <p>Shop Seats <span>></span></p>
-                    <img src="images/seat.png" alt="">
+                    <a href="#categories"><img src="images/seat.png" alt=""></a>
                 </div>
                 <div class="category flex">
                     <p>Shop Seats <span>></span></p>
-                    <img src="images/seat.png" alt="">
+                    <a href="#categories"><img src="images/seat.png" alt=""></a>
                 </div>
                 <div class="category flex">
                     <p>Shop Seats <span>></span></p>
-                    <img src="images/seat.png" alt="">
+                    <a href="#categories"><img src="images/seat.png" alt=""></a>
                 </div>
                 <div class="category flex">
                     <p>Shop Seats <span>></span></p>
-                    <img src="images/seat.png" alt="">
+                    <a href="#categories"><img src="images/seat.png" alt=""></a>
                 </div>
             </div>
         </section>
@@ -206,11 +206,11 @@
                         have had this
                         with my first baby.</p>
                     <div><span>Rachel N</span></div>
-                    <div class="dots"><img src="/images/dots.png" alt=""></div>
+                    <div class="dots"><a href="#dots"><img src="/images/dots.png" alt=""></a></div>
                 </div>
             </div>
-            <div class="left-arrow flex"><</div>
-            <div class="right-arrow flex">></div>
+            <div class="left-arrow"><a href="#dots" class="flex"> < </a></div>
+            <div class="right-arrow"><a href="#dots" class="flex"> > </a></div>
         </section>
         
         <!-- Community -->
@@ -230,7 +230,7 @@
                     </div>
                 </div>
             </div>
-            <div class="plus flex"><p class="flex pp">+</p></div>
+            <div class="plus flex"><p class="flex"><a href="">+</a></p></div>
         </section>
         
         <!-- Stat -->
@@ -341,6 +341,6 @@
             </div>
         </div>
     </footer>
-    <script src="index.js" ></script>
+    <script type="module" src="index.js" ></script>
 </body>
 </html>

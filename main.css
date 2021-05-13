@@ -11,7 +11,7 @@
 }
 
 :root {
-    --main-color: #000000;
+    --main-color: #000;
     --main-bg-color: #FFFFFF;
     --bg-color-1: #FAFAFA;
     --bg-color-2: #F2F2F2;
@@ -126,7 +126,7 @@ li {
 
 .box-1 {
     width: 200px;
-    height: 200px;
+    height: 230px;
 }
 
 .box-2 {
@@ -167,7 +167,6 @@ li {
     margin: 20px 0;
     min-width: 200px;
     font-size: 1.1rem;
-    outline: none;
     border:var(--main-color);
     transition: all 0.25s ease;
 }
@@ -244,7 +243,7 @@ li {
     opacity: 0.4;
 }
 
-.fa-stack {
+#main-menu {
     display: none;
     transition: all 0.35s ease-in-out;
     cursor: pointer;
@@ -348,7 +347,7 @@ li {
 
 /* Main */
 /* Side Menu */
-.side-menu-container {
+#side-menu-container {
     position: fixed;
     top: 140px;
     z-index: 977;
@@ -356,17 +355,37 @@ li {
     background-color: var(--main-bg-color);
 }
 
-.side-menu {
+#side-menu {
     background-color: var(--main-bg-color);
     width: 250px;
     padding-bottom: 100px;
     transition: all 3.35s ease-in-out;
 }
 
-.side-menu li {
+#side-menu li {
     padding: 1.2rem 0 0 1.5rem;
+    position: relative;
 }
 
+#side-menu li::after {
+    content: '>';
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--main-pastel);
+    position: absolute;
+    top: 12px;
+    left: 170px;
+    display: none;
+}
+
+#side-menu li:focus::after  {
+    display: initial;
+}
+
+#side-menu li:hover,
+#side-menu li:focus {
+    color: var(--main-pastel);
+}
 /* Showcase */
 .showcase {
     margin-top: 140px;
@@ -519,12 +538,16 @@ li {
 }
 
 .left-arrow, .right-arrow {
+    position: absolute;
+}
+
+.left-arrow a, .right-arrow a {
+    position: absolute;
     background-color: var(--main-color);
     border-radius: 50%;
-    color: var(--main-bg-color);
     width: 40px;
     height: 40px;
-    position: absolute;
+    color: var(--main-bg-color);
 }
 
 .left-arrow {
@@ -564,6 +587,10 @@ li {
     position: relative;
     left: 50%;
     bottom: -40px;
+}
+
+.community p a {
+    color: var(--main-bg-color);
 }
 
 /* Stat */
@@ -730,8 +757,9 @@ li {
 }
 
 @media (max-width: 1075px) {
-   .fa-stack, #account2 {
-        display: block;
+   #main-menu, #account2 {
+        display: initial;
+        outline:lightseagreen;
     }
 
     #shop, #about_4moms, #account, #support, #country {
@@ -746,7 +774,6 @@ li {
 
     .left-nav ul {
         justify-content: flex-start;
-        /* background-color: lightcoral; */
     }
 
     .right-nav ul {
@@ -975,5 +1002,3 @@ li {
         padding: 0 15px;
     }
 }
-
-
