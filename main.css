@@ -170,6 +170,7 @@ li {
     font-size: 1.1rem;
     border:var(--main-color);
     transition: all 0.25s ease;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -576,6 +577,7 @@ li {
 
 .left-arrow, .right-arrow {
     position: absolute;
+    cursor: pointer;
 }
 
 .left-arrow a, .right-arrow a {

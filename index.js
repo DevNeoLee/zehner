@@ -1,4 +1,4 @@
-import { pages } from './main.js';
+import { render } from './router.js';
 
 /* selectors */
 //shop, side menues
@@ -149,13 +149,5 @@ function handleKeydown(event, country, index, height) {
   }
 }
 
-mouse_click_outside();
-//mouse outside click menu box close feature
-function mouse_click_outside() {
-  // console.log(countries.all.blur())
-  console.log(countries.hasOwnProperty(Event));
-  // if (countries.(e.target).length === 0) {
-  //   country_options.classList.toggle('hide_display');
-  // }
- 
-}
+window.onhashchange = () => render(window.location.hash);
+render(window.location.hash);
