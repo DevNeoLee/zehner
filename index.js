@@ -1,3 +1,5 @@
+import { pages } from './main.js';
+
 /* selectors */
 //shop, side menues
 const shop_button = document.querySelector('#shop');
@@ -39,7 +41,6 @@ function side_menu_toggle() {
   shop_button.addEventListener('click', (e) => {
     e.preventDefault();
     toggle_sidemenu()
-    
   })
 
   side_menu.addEventListener('click', (e) => {
@@ -158,4 +159,3 @@ function mouse_click_outside() {
   // }
  
 }
-  

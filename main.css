@@ -12,6 +12,7 @@
 
 :root {
     --main-color: #000;
+    --color1: #777;
     --main-bg-color: #FFFFFF;
     --bg-color-1: #FAFAFA;
     --bg-color-2: #F2F2F2;
@@ -203,14 +204,12 @@ li {
     box-shadow: 0.2px 0.2px var(--shadow-color);
     width: 100%;
     color: var(--main-color);
-    /* background-color: lightyellow; */
 }
 
 .navbar .container {
     width: 100%;
 }
 .navbar ul {
-    /* background-color: lightskyblue; */
     width: 100%;
 }
 
@@ -259,10 +258,6 @@ li {
     padding-left: 0;
 }
 
-#country-label-container {
-    /* background-color: lightsalmon; */
-}
-
 #country-label {
     padding-left: 5px;
     overflow: hidden;
@@ -289,9 +284,7 @@ li {
     z-index: 10;
     white-space: nowrap;
 }
-#country-options {
-    /* transition: 0.35s all ease; */
-}
+
 #country-options li:hover,
 #country-options li:focus {
     background-color: black;
@@ -365,6 +358,7 @@ li {
 #side-menu li {
     padding: 1.2rem 0 0 1.5rem;
     position: relative;
+    cursor: pointer;
 }
 
 #side-menu li::after {
@@ -391,6 +385,7 @@ li {
     margin-top: 140px;
     min-height: 620px;
     background-color: var(--bg-color-4);
+    width: 100%;
 }
 
 .showcase-text {
@@ -413,6 +408,48 @@ li {
     margin-top: 95px;
     position: absolute;
     right: 5%;
+}
+
+.shop-container {
+    width: 100%;
+    justify-content: unset;
+    align-items: initial;
+    background-color: var(--main-bg-color);
+    padding: 2rem;
+}
+
+#shop-left {
+    background-color: var(--main-bg-color);
+    width: 250px;
+}
+
+.shop-view {
+    width: calc(100% - 250px);
+}
+
+#shop-image {
+    width: 100%;
+    height: 370px;
+    min-width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#shop-image img {
+    min-width: 200px;
+}
+
+.box-7 {
+    padding: 50px 70px;
+    max-width: 700px;
+}
+
+.box-7 p {
+    padding: 0;
+    width: 70%;
+    color: var(--color1);
 }
 
 /* Summary */
@@ -759,7 +796,6 @@ li {
 @media (max-width: 1075px) {
    #main-menu, #account2 {
         display: initial;
-        outline:lightseagreen;
     }
 
     #shop, #about_4moms, #account, #support, #country {
@@ -769,7 +805,6 @@ li {
     .navbar li {
         padding: 0 3rem;
         margin: 0;
-        /* background-color:rgb(0, 0, 255); */
     }
 
     .left-nav ul {
@@ -778,19 +813,18 @@ li {
 
     .right-nav ul {
         justify-content: flex-end;
-        /* background-color: lightcoral; */
     }
 
     /* Showcase */
     .showcase {
-        /* height: 650px; */
         z-index: 10;
+        padding: 0;
+        width: 100%;
     }
 
     .showcase-container {
         display: initial;
         height: 650px;
-        /* overflow: auto; */
     }
 
     .showcase-text {
@@ -799,12 +833,42 @@ li {
         margin: 0;
         padding: 0;
     }
+    .shop-container {
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        min-height: 600px;
+        width: 100%;
+    }
 
+    #shop-left {
+        width: 0px;
+    }
+
+    #shop-view {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .box-7 {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    #shop-image {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    #shop-image img {
+        padding: 0;
+        margin: 0;
+    }
     .chair {
         height: 450px;
-        /* position: absolute; */
-        /* top: 500px; */
-        
         width: 450px;
         padding: 0;
         margin: 0 auto;
