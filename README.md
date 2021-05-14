@@ -2,35 +2,48 @@
 
 ## Objective
 
-### To implement a site design given and features as close as it appears on its design on Figma
+### To implement features of 4Moms site with the design given on Figma, as closely as they appeared to be
 
 ---
 
 ## Strategy
-1. Implement HTML CSS
-2. Complete them responsive
-3. Javascript funtions
+1. Analize features
+2. Design HTML CSS structures based on the features
+2. Responsive in mind
+3. Design JavsScript/CSS on the features
+3. Make the site a SPA(Single Page Application) with vanilla JavaScript
 
 ---
+## Thoughts on HTML
+- Efficient layout of markup to be optimal
+- Accessibility in mind
+
 ## Thoughts on CSS
-- Tried to make as many utility classes, variables reusable throughout the site
-
-- Profer balance of flex and grid layout for different situations in most effective ways
-
-- media query to different size of screen devices
----
+- Reusable utility classes and variables throughout the site
+- Profer balance of flex and grid layout 
+- Thoughful naming and hierarchy
 
 ## Thoughts on Javascript
-- add EventListners for buttons and links
+- SPA components for several pages and addresses
+- Modular design of functions and objects
+---
+## Features
+### SPA 
+- JavaScript to implement 'Showcase' component dynamically with different page addresses
+- State Data(data.js) fed to router(router.js) to represent on different pages on link clicking, address entering on the address bar, foward/backward button pressing
 
-- use of CSS utility classes to add and remove to classList when the buttons clicked
+### Popups
+- Side menus, Country Select menus, and Search box are implemented for mouse click and keyboard keydown for Tab, Enter, Esc, Arrowkeys 
+
+### Responsiveness
+- Flex, Grid, markup design were used for detailed changes on various screen sizes
+- CSS tricks for example, classList and !important to ensure accurate excution of displaying/hiding components problem
+
+---
 
 ## Thoughts on Future Implementations with More Time
-- vanilla javascript to design single-page-application as much to get close the features showed on your design markup
-
-- the native JS capabilities to write code to implement
-1. modular JS
-2. navigation with a router
-3. hosting and loading pages
-
-- Tune up CSS to pixel perfect design implementation
+- Further vanilla javascript implementation of SPA functions
+- use of History API for JavaScript router features insead of the hashed 
+- more assessiblity features
+- optimizing styles and refatoring JavaScript
+- renaming to more meaningful and specific terms
