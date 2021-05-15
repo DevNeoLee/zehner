@@ -1,4 +1,4 @@
-import { render } from './router.js';
+import { render } from './javascript/router.js';
 
 /* selectors */
 //shop, side menues
@@ -28,14 +28,22 @@ const countries = document.querySelectorAll('#country-options ul li');
 //   e.preventDefault();
 // })
 
-/* calling all addEventListeners */
+/* calling all addEventListeners and hash_router function */
+hash_change();
 side_menu_toggle();
 searchbar_show();
 searchbar_close();
 country_button_toggle();
 country_select();
 
+
 /* functions */
+// as DOM loaded, render function will call on the path address
+function hash_change() {
+  window.onhashchange = () => render(window.location.hash);
+  render(window.location.hash);
+}
+
 //side menues
 function side_menu_toggle() {
   shop_button.addEventListener('click', (e) => {
@@ -149,5 +157,3 @@ function handleKeydown(event, country, index, height) {
   }
 }
 
-window.onhashchange = () => render(window.location.hash);
-render(window.location.hash);
