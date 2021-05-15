@@ -44,6 +44,7 @@
 ## Thoughts on Future Implementations with More Time
 - Further vanilla javascript implementation of SPA functions
 - use of History API for JavaScript router features insead of the hashed 
+- loading animation as SPA loads a component(page)
 - more assessiblity features
 - optimizing styles and refatoring JavaScript
 - renaming to more meaningful and specific terms
