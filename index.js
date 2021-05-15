@@ -24,10 +24,6 @@ const country_label_link = document.querySelector('#country-label-container a');
 //country options box
 const countries = document.querySelectorAll('#country-options ul li');
 
-// document.querySelectorsAll('a').addEventlistener('click', (e) => {
-//   e.preventDefault();
-// })
-
 /* calling all addEventListeners and hash_router function */
 hash_change();
 side_menu_toggle();
